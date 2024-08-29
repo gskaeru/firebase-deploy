@@ -48,6 +48,7 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Debug Environment Variables
+        if: ${{ always() }}
         run: |
           echo "FIREBASE_API_KEY=${{ secrets.FIREBASE_API_KEY }}"
           echo "FIREBASE_AUTH_DOMAIN=${{ secrets.FIREBASE_AUTH_DOMAIN }}"
